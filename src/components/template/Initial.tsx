@@ -1,5 +1,5 @@
 
-import styles from '../styles/Initial.module.css'
+import styles from '../../styles/Initial.module.css'
 
 export default function Initial() {
     return (

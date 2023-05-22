@@ -1,0 +1,32 @@
+.navbar {
+  background-color: black;
+  padding: 0 15%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #272727;
+  height: 80px;
+  color: white;
+  gap: 20%;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+.navbar li {
+  cursor: pointer;
+}
+.navbar li:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #019fb6;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.navbar li:hover:after {
+  transform: scaleX(1);
+}
