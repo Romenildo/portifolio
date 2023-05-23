@@ -2,78 +2,27 @@
 import { useState } from "react";
 import styles from "../../styles/Experiences.module.css";
 
+import { frontEndItems, backEndItems, KnowledgesItems } from "@/core/utils/date";
+
+
 export default function Experiences() {
   const [activeIndex, setActiveIndex] = useState(-1);
+  const [currentItems, setCurrentItems] = useState<any>([])
 
   const handleClick = (index:number) => {
     setActiveIndex(index);
-  };
+    if(index === 0){
+      return setCurrentItems(backEndItems)
+    }
+    if(index === 1){
+      return setCurrentItems(frontEndItems)
+    }
+    if(index === 2){
+      return setCurrentItems(KnowledgesItems)
+    }
+  }
 
-  const know = [{
-    id:1,
-    name: "nodeJS",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:2,
-    name: "ReactJS",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:3,
-    name: "nextJS",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:4,
-    name: "Typescrypt",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:5,
-    name: "Mongodb",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:6,
-    name: "SQL SERVER",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:7,
-    name: "github",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:8,
-    name: "git",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:9,
-    name: "Express",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:10,
-    name: "angular",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:11,
-    name: "vue.js",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:12,
-    name: "docker-copmopse",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  },
-  {
-    id:13,
-    name: "...",
-    description:"O NodeJS é uma poderosa plataforma para construir de forma rápida e fácil aplicações de rede escaláveis"
-  }]
+  
 
   return (
     <div className={styles.experiences}>
@@ -101,9 +50,15 @@ export default function Experiences() {
       </div>
 
       <ul className={styles.content}>
-        { know.map((e:any)=>(
-          <li className={activeIndex === e.id ? styles.active : ''} key={e.id} onClick={() => handleClick(e.id)}>{e.name}</li>
-        ))}
+        { currentItems.length > 0 ?(
+          currentItems.map((e:any)=>(
+            <li className={activeIndex === e.id ? styles.active : ''} key={e.id} onClick={() => handleClick(e.id)}>{e.name}</li>
+          ))
+        ):(
+          <p>Escolha uma das opções.</p>
+        )
+        
+        }
       </ul>
     </div>
   );
