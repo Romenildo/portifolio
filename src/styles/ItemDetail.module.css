@@ -1,0 +1,31 @@
+.box{
+    position:absolute;
+    left: 960px;
+    top: 95px;
+    height: fit-content;
+}
+
+.details{
+    width: 100%;
+    height: fit-content;
+    min-width: 300px;
+    max-width: 420px;
+    color: rgb(197, 197, 197);
+}
+
+.details h1{
+    padding: 10% 5%;
+    color: #00d2df;
+}
+
+.details p{
+    padding: 5% 5% 10% 5%;
+}
+
+@media (max-width: 1300px)
+{
+  .box
+   {
+    display: none;
+   }
+}

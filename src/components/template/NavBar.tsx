@@ -14,10 +14,10 @@ export default function NavBar(props:NavBarProps) {
         <div className={styles.logo}>
           <a href="#"> RF </a>
         </div>
-          <li onClick={()=>props.onChange("initial")}>Início</li>
           <li onClick={()=>props.onChange("about")}>Sobre</li>
-          <li onClick={()=>props.onChange("experiences")}>Experiência</li>
+          <li onClick={()=>props.onChange("knowledges")}>Conhecimentos</li>
           <li onClick={()=>props.onChange("projects")}>Projetos</li>
+          <li onClick={()=>props.onChange("experiences")}>Experiências</li>
         </ul>
 
         <p>Romenildo Ferreira</p>

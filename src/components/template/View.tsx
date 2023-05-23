@@ -15,7 +15,7 @@ export default function View(props:ViewProps) {
           <div>x</div>
         </div>
         <div className={styles.content}> 
-          <div className={styles.item}>
+          <div>
             {props.children}
           </div>
           <div className={styles.footer}></div>

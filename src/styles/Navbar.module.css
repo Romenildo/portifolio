@@ -7,7 +7,7 @@
   border-bottom: 2px solid #272727;
   color: rgb(209, 209, 209);
   font-size: 0.85rem;
-  background-image: linear-gradient(to bottom, #666666,#494949,#494949);
+  background-image: linear-gradient(to bottom, #666666, #494949, #494949);
   box-shadow: 1px 1px 2px #1f1f1f;
   border-bottom: 7px solid #666666;
 }
@@ -21,27 +21,29 @@
   border-radius: 3px;
 }
 .navbar li {
-  cursor: pointer;
-  background-image: linear-gradient(to bottom, #67a298,#325458, #4d7f86);
+  background-image: linear-gradient(to bottom, #00d2df, #12878d, #00d2df);
   padding: 12px 40px;
 }
-
-
-.logo{
+.navbar li:hover {
   cursor: pointer;
-  background-image: linear-gradient(to bottom, #677ca2,#6fa1b7, #6fa1b7);
+  opacity: 0.9;
+  color: #fff;
+}
+
+.logo {
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #677ca2, #6fa1b7, #6fa1b7);
   padding: 12px 40px;
   border-radius: 3px;
-  color: white;
   width: 200px;
   text-align: center;
 }
-.logo a{
+.logo a {
   color: white;
   text-decoration: none;
 }
 
-.navbar p{
+.navbar p {
   margin-right: 10%;
   opacity: 0.3;
 }

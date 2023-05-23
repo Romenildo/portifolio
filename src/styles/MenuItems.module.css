@@ -1,0 +1,28 @@
+.options {
+    width: 25%;
+    border-right: 2px solid #01c0ca;
+    padding-right: 4%;
+    margin-bottom: 2%;
+    min-width: 200px;
+  }
+  .options ul {
+    margin-top: 20%;
+    list-style: none;
+  }
+  .options ul li {
+    padding: 10px;
+    margin: 2px;
+    text-align: center;
+    border-left: 3px solid #272727;
+    transition: background-color 0.5s ease;
+    color: #00d2df;
+  }
+  .options ul li:hover {
+    cursor: pointer;
+    background-color: #00d4df23;
+  }
+  
+  .active {
+    background-color: #00d4df4b!important;
+    border-left: 3px solid #00d2df !important;
+  }

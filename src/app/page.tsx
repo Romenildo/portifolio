@@ -3,13 +3,13 @@
 import About from "@/components/template/About";
 import Experiences from "@/components/template/Experiences";
 import Footer from "@/components/template/Footer";
-import Initial from "@/components/template/Initial";
 import Knowledges from "@/components/template/Knowledges";
 import NavBar from "@/components/template/NavBar";
 
 import styles from "./page.module.css";
 import View from "@/components/template/View";
 import { useState } from "react";
+import Project from "@/components/template/Project";
 
 export default function Home() {
   const [content, setContent] = useState("");
@@ -19,10 +19,10 @@ export default function Home() {
 
   function renderContent() {
     switch (content) {
-      case "initial":
+      case "projects":
         return (
-          <View title="Inicio">
-            <Initial></Initial>
+          <View title="Projetos">
+            <Project></Project>
           </View>
         );
       case "about":
@@ -31,16 +31,16 @@ export default function Home() {
             <About></About>
           </View>
         );
-      case "experiences":
+      case "knowledges":
         return (
-          <View title="Experiencias">
-            <Experiences></Experiences>
+          <View title="Conhecimentos">
+            <Knowledges></Knowledges>
           </View>
         );
-      case "projects":
+      case "experiences":
         return (
-          <View title="projects">
-            <Knowledges></Knowledges>
+          <View title="Experiências">
+            <Experiences></Experiences>
           </View>
         );
         default:
