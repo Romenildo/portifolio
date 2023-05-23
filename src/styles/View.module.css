@@ -1,14 +1,17 @@
 .header {
-  margin: 5%;
-  height: 70vh;
+  margin: 2%;
+  height: 75vh;
+  width: min-content;
 }
 
 .title {
   background-image: linear-gradient(to bottom, #67a298, #325458, #4d7f86);
   display: flex;
   justify-content: space-between;
-  padding: 3px 15px;
-  color: #fff;
+  padding: 5px 15px 5px 50px;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: rgb(172, 172, 172);
   border-bottom: 3px solid rgba(0, 0, 0, 0.829);
 }
 

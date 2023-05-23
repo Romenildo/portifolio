@@ -1,7 +1,12 @@
 
 import styles from '../../styles/Navbar.module.css'
 
-export default function NavBar() {
+interface NavBarProps{
+  onChange: (e:any)=> void
+}
+
+
+export default function NavBar(props:NavBarProps) {
     return (
      <nav className={styles.navbar}>
         
@@ -9,10 +14,10 @@ export default function NavBar() {
         <div className={styles.logo}>
           <a href="#"> RF </a>
         </div>
-          <li>Início</li>
-          <li>Sobre</li>
-          <li>Experiência</li>
-          <li>Projetos</li>
+          <li onClick={()=>props.onChange("initial")}>Início</li>
+          <li onClick={()=>props.onChange("about")}>Sobre</li>
+          <li onClick={()=>props.onChange("experiences")}>Experiência</li>
+          <li onClick={()=>props.onChange("projects")}>Projetos</li>
         </ul>
 
         <p>Romenildo Ferreira</p>
