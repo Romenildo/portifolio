@@ -15,7 +15,7 @@ export default function Home() {
    <main>
     <NavBar></NavBar>
     <View title="teste"> 
-      <About></About>
+      <Experiences></Experiences>
     </View>
 
    </main>
