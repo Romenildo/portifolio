@@ -10,8 +10,21 @@
   height: min-content;
   margin-right: 75px;
   color: rgb(170, 169, 169);
-  min-width: 50vw;
-  min-height: 50vh;
+  width: 70vw;
+  height: 70vh;
+}
+
+
+@media (max-width: 1000px) {
+  .content {
+    width: 50vw;
+  }
+}
+@media (max-width: 600px) {
+  .content {
+    width: 40vw;
+    min-width: 200px;
+  }
 }
 
 
