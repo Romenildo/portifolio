@@ -8,13 +8,13 @@ import {
   KnowledgesItems,
 } from "@/core/utils/data";
 import MenuItems from "../MenuItems";
-import View from "./View";
 import ItemDetail from "../ItemDetail";
 
 export default function Knowledges() {
   const [currentItems, setCurrentItems] = useState<any>([]);
   const [currentItem, setCurrentItem] = useState<any>(null);
   const [activeItemIndex, setActiveItemIndex] = useState(-1);
+  const [isVisible, setIsVisible] = useState(true)
 
   const handleClick = (index: number) => {
     if (index === 0) {
@@ -31,6 +31,8 @@ export default function Knowledges() {
   function showDetail() {
     return (
       <ItemDetail
+        isVisible = {isVisible}
+        setVisible={setIsVisible}
         title={currentItem?.name}
         description={currentItem?.description}
       ></ItemDetail>
@@ -38,6 +40,7 @@ export default function Knowledges() {
   }
 
   function activeItem(item: any) {
+    setIsVisible(true)
     setActiveItemIndex(item.id);
     setCurrentItem(item);
     showDetail();
@@ -66,7 +69,7 @@ export default function Knowledges() {
           )}
         </ul>
         {currentItems.length > 0 && (
-          <p className={styles.notice}>! Clique em algum para mais detalhes(Somente PC).</p>
+          <p className={styles.notice}>! Clique em algum para mais detalhes (Somente PC).</p>
         )}
       </div>
       {currentItem !== null ? showDetail() : ""}

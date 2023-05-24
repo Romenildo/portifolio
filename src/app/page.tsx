@@ -13,7 +13,10 @@ import Project from "@/components/template/Project";
 
 export default function Home() {
   const [content, setContent] = useState("");
+  const [isVisible, setIsVisible] = useState(true)
+
   function onchange(typeContent:string) {
+    setIsVisible(true)
     setContent(typeContent)
   }
 
@@ -21,25 +24,25 @@ export default function Home() {
     switch (content) {
       case "projects":
         return (
-          <View title="Projetos">
+          <View isVisible={isVisible} setVisible={setIsVisible} title="Projetos">
             <Project></Project>
           </View>
         );
       case "about":
         return (
-          <View title="Sobre">
+          <View isVisible={isVisible} setVisible={setIsVisible}  title="Sobre">
             <About></About>
           </View>
         );
       case "knowledges":
         return (
-          <View title="Conhecimentos">
+          <View isVisible={isVisible} setVisible={setIsVisible}  title="Conhecimentos">
             <Knowledges></Knowledges>
           </View>
         );
       case "experiences":
         return (
-          <View title="Experiências">
+          <View isVisible={isVisible} setVisible={setIsVisible}  title="Experiências">
             <Experiences></Experiences>
           </View>
         );
