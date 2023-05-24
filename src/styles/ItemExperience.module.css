@@ -1,0 +1,14 @@
+.header h1 {
+  color: #00d2df;
+}
+.header p {
+  float: right;
+  margin: 1%;
+}
+.description {
+  margin-top: 5%;
+}
+.detail {
+  margin-top: 3%;
+  color: #00d2df;
+}

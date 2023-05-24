@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "../../styles/Knowledges.module.css";
 
-import { frontEndItems, backEndItems, KnowledgesItems } from "@/core/utils/date";
+import { frontEndItems, backEndItems, KnowledgesItems } from "@/core/utils/data";
 import MenuItems from "../MenuItems";
 import View from "./View";
 import ItemDetail from "../ItemDetail";
